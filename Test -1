@@ -1,0 +1,22 @@
+import unittest
+
+# Define the function to be tested
+def add(a, b):
+    return a + b
+
+# Define a test case class
+class TestAddFunction(unittest.TestCase):
+
+    # Define test methods
+    def test_add_positive_numbers(self):
+        self.assertEqual(add(1, 2), 3)
+
+    def test_add_negative_numbers(self):
+        self.assertEqual(add(-1, -2), -3)
+
+    def test_add_mixed_numbers(self):
+        self.assertEqual(add(1, -2), -1)
+
+# Run the tests if the script is executed
+if __name__ == '__main__':
+    unittest.main()
